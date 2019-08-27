@@ -1,0 +1,10 @@
+website/marcioheleno/App.class
+website/marcioheleno/service/Buffer.class
+website/marcioheleno/model/bloco/dados/Bloco.class
+website/marcioheleno/service/GerenciadorBuffer.class
+website/marcioheleno/service/Gravacao.class
+website/marcioheleno/service/Leitura.class
+website/marcioheleno/model/bloco/pagina/Pagina.class
+website/marcioheleno/service/Lru.class
+website/marcioheleno/model/bloco/container/Container.class
+website/marcioheleno/model/bloco/tupla/Tupla.class

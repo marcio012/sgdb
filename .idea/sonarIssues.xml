@@ -33,6 +33,46 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/website/marcioheleno/model/bloco/pagina/Pagina.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/website/marcioheleno/model/bloco/tupla/Tupla.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/website/marcioheleno/service/Buffer.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/website/marcioheleno/service/GerenciadorBuffer.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/website/marcioheleno/service/Gravacao.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/website/marcioheleno/service/Leitura.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/website/marcioheleno/service/Lru.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/website/marcioheleno/service/Pagina.java">
+          <value>
+            <set />
+          </value>
+        </entry>
       </map>
     </option>
   </component>

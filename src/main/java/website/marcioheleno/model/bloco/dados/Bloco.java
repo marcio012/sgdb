@@ -39,6 +39,13 @@ public class Bloco {
         this.dados = aux;
     }
 
+    public void adicionarTuplaNoBloco(byte[] tupla) {
+        int bytesUsados = byteToInt(getBytes(this.dados, 5, 3));
+        this.dados = bytePlusbyte(this.dados, tupla, bytesUsados);
+
+        setBytes(intToByte(bytesUsados + tupla.length), 5, 3);
+    }
+
     //retorna conjunto de bytes de um array de bytes
     public static byte[] getBytes(byte[] dadosRecebidos, int posicaoInicial, int deslocamento){
         byte[] bytes = new byte[deslocamento];
@@ -51,7 +58,7 @@ public class Bloco {
     }
 
     //concatena array de bytes
-    static byte[] bytePlusbyte(byte[] valor1, byte[] valor2, int posicao){
+    public static byte[] bytePlusbyte(byte[] valor1, byte[] valor2, int posicao){
         for(int i = posicao, j = 0; i < valor2.length + posicao; i++, j++){
             valor1[i] = valor2[j];
         }
@@ -63,6 +70,10 @@ public class Bloco {
         for(int i = posicaoInicial, j = 0; i < posicaoInicial + deslocamento; i++, j++){
             dados[i] = dadosRecebidos[j];
         }
+    }
+
+    public int getTamanhoBloco() {
+        return byteToInt(getBytes(dados, 5, 3));
     }
 
     public static byte[] intToByte(int i) {
@@ -92,7 +103,7 @@ public class Bloco {
         return buf.getInt();
     }
 
-    static byte[] intTo2Byte(int i) {
+    public static byte[] intTo2Byte(int i) {
         ByteBuffer buf = ByteBuffer.allocate(4);
         buf.putInt(i);
 
@@ -103,6 +114,25 @@ public class Bloco {
         result[1] = bytes[3];
 
         return result;
+    }
+
+    public static int byte2ToInt(byte[] bytes) {
+        byte[] result = new byte[4];
+
+        result[0] = 0;
+        result[1] = 0;
+        result[2] = bytes[0];
+        result[3] = bytes[1];
+
+        ByteBuffer buf = ByteBuffer.wrap(result);
+
+        return buf.getInt();
+    }
+
+    public static String byteToString(byte[] bytes){
+
+        return new String(bytes);
+
     }
 
 }
