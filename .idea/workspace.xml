@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe8c0847-9109-47e7-a2b4-5902bb364964" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarIssues.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarIssues.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/website/marcioheleno/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/website/marcioheleno/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/website/marcioheleno/model/bloco/dados/Bloco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/website/marcioheleno/model/bloco/dados/Bloco.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -118,7 +112,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1566905336447</updated>
-      <workItem from="1566905349556" duration="7433000" />
+      <workItem from="1566905349556" duration="7826000" />
+      <workItem from="1566963603488" duration="262000" />
     </task>
     <servers />
   </component>
@@ -130,7 +125,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
