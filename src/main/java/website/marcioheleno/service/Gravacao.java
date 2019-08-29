@@ -121,7 +121,7 @@ public class Gravacao {
 
         //grava dados no arquivo
         try {
-            PrintWriter out = new PrintWriter(".txt");
+            PrintWriter out = new PrintWriter("gravacao.txt");
             out.println(text);
             out.close();
         } catch (FileNotFoundException e) {

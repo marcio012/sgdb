@@ -17,22 +17,17 @@ public class Leitura {
 
     public void criaContainers() {
         String arquivo1 = "forn-tpch.txt";
-//        String arquivo2 = "../resources/data/meu-tpch.txt";
 
         log.info("local arquivo: " + arquivo1);
-//        log.info("local arquivo: " + arquivo2);
-
 
         iniciarLeitura(arquivo1);
-//
-
 
         System.out.println("Containers criados");
 
         System.out.println("/n/n/n");
         System.out.println("TESTE BUFFER/n/n/n");
         GerenciadorBuffer.geraRequisicoes();
-//        Gravador.exportaArquivoTxt(containers);
+        Gravacao.exportaArquivoTxt(containers);
 
     }
 
@@ -43,16 +38,17 @@ public class Leitura {
             RandomAccessFile arquivo = new RandomAccessFile(arquivoCaminho, "rw");
 
             String linha = arquivo.readLine();
-
             Container container = new Container(linha);
             System.out.println("Gerado Bloco de Controle");
 
             while ((linha = arquivo.readLine()) != null) {
                 adicionarTupla(Tupla.montaTuplaByte(separador(linha)), container);
+
             }
 
             arquivo.close();
             containers.add(container);
+
 
         } catch (IOException | NullPointerException exp) {
             exp.printStackTrace();
@@ -101,6 +97,7 @@ public class Leitura {
                 System.out.println("Salvou tupla no bloco: " + idBlocoLivre);
                 System.out.println("idmaiorq" + idBlocoLivre + "tamanho" + container.getBlocoId(idBlocoLivre).getTamanhoBloco());
                 container.getBlocoId(idBlocoLivre).adicionarTuplaNoBloco(tupla);
+                Gravacao.salvaArquivo(container);
             } else { //bloco menor que tamanho da tupla
                 System.out.println("idmenorq" + idBlocoLivre + "tamanho" + container.getBlocoId(idBlocoLivre).getTamanhoBloco());
                 Bloco novo = new Bloco(idBlocoLivre + 1, container.getContainerId());
@@ -108,6 +105,7 @@ public class Leitura {
                 novo.adicionarTuplaNoBloco(tupla);
                 container.getBlocos().add(novo);
                 container.atualizaIdLivreControle(idBlocoLivre + 1);
+                Gravacao.salvaArquivo(container);
             }
         }
     }
