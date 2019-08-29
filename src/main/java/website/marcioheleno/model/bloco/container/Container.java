@@ -2,6 +2,7 @@ package website.marcioheleno.model.bloco.container;
 
 import lombok.Data;
 import website.marcioheleno.model.bloco.dados.Bloco;
+import website.marcioheleno.utils.ConverterUltils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +23,7 @@ public class Container {
     public Bloco getBlocoId(int id) {
         for (int i = 0; i < blocos.size(); i++) {
             Bloco b = blocos.get(i);
-            if (id == Bloco.byteToInt(Bloco.getBytes(b.getDados(), 1, 3))) {
+            if (id == ConverterUltils.byteToInt(ConverterUltils.getBytes(b.getDados(), 1, 3))) {
                 return b;
             }
         }
@@ -30,11 +31,11 @@ public class Container {
     }
 
     public void atualizaIdLivreControle(int id) {
-        controle.setBytes(Bloco.intToByte(id), 5, 3);
+        controle.setBytes(ConverterUltils.intToByte(id), 5, 3);
     }
 
     public int tamanhoDoBloco() {
-        return Bloco.byteToInt(Bloco.getBytes(controle.getDados(), 1, 3));
+        return ConverterUltils.byteToInt(ConverterUltils.getBytes(controle.getDados(), 1, 3));
     }
 
     public Bloco getControle() {

@@ -4,6 +4,7 @@ import lombok.extern.java.Log;
 import website.marcioheleno.model.bloco.container.Container;
 import website.marcioheleno.model.bloco.dados.Bloco;
 import website.marcioheleno.model.bloco.tupla.Tupla;
+import website.marcioheleno.utils.ConverterUltils;
 
 import java.io.IOException;
 import java.io.RandomAccessFile;
@@ -22,33 +23,32 @@ public class Leitura {
 
         iniciarLeitura(arquivo1);
 
-        System.out.println("Containers criados");
+        log.info("Containers criados");
+        log.info("/n/n/n");
+        log.info("TESTE BUFFER/n/n/n");
 
-        System.out.println("/n/n/n");
-        System.out.println("TESTE BUFFER/n/n/n");
         GerenciadorBuffer.geraRequisicoes();
+        // TODO: Chamada de exportação do arquivo para outro txt
         Gravacao.exportaArquivoTxt(containers);
 
     }
 
     void iniciarLeitura(String arquivoCaminho) {
-        System.out.println("Iniciando leitura do arquivo...");
+        log.info("Iniciando leitura do arquivo...");
 
         try {
             RandomAccessFile arquivo = new RandomAccessFile(arquivoCaminho, "rw");
 
             String linha = arquivo.readLine();
             Container container = new Container(linha);
-            System.out.println("Gerado Bloco de Controle");
+//            log.info("Gerado Bloco de Controle");
 
             while ((linha = arquivo.readLine()) != null) {
                 adicionarTupla(Tupla.montaTuplaByte(separador(linha)), container);
-
             }
 
             arquivo.close();
             containers.add(container);
-
 
         } catch (IOException | NullPointerException exp) {
             exp.printStackTrace();
@@ -57,7 +57,7 @@ public class Leitura {
 
 
     void leituraEGravacao(String arquivoCaminho, String arquivoDestino) {
-        System.out.println("Iniciando leitura e gravação do arquivo...");
+        log.info("Iniciando leitura e gravação do arquivo...");
 
         try {
             RandomAccessFile arquivoLeitura = new RandomAccessFile(arquivoCaminho, "rw");
@@ -67,11 +67,12 @@ public class Leitura {
 
 
             Container container = new Container(linhaLida);
-            System.out.println("Gerado Bloco de Controle");
+//            log.info("Gerado Bloco de Controle");
 
             while ((linhaLida = arquivoLeitura.readLine()) != null) {
                 adicionarTupla(Tupla.montaTuplaByte(separador(linhaLida)), container);
-                arquivoEscrita.write(linhaLida.getBytes());
+                // TODO: chamar a escrita.
+//                arquivoEscrita.write(linhaLida.getBytes());
 
             }
 
@@ -84,24 +85,25 @@ public class Leitura {
     }
 
     void adicionarTupla(byte[] tupla, Container container) {
-        int idBlocoLivre = Bloco.byteToInt(Bloco.getBytes(container.getControle().getDados(), 5, 3));
+
+        int idBlocoLivre = ConverterUltils.byteToInt(ConverterUltils.getBytes(container.getControle().getDados(), 5, 3));
         //se nao exitir bloco, deve ser criado
         if (idBlocoLivre == 0) {
             Bloco novo = new Bloco(1, container.getContainerId());
-            System.out.println("Gerado bloco de ID: " + 1);
+//            log.info("Gerado bloco de ID: " + 1);
             novo.adicionarTuplaNoBloco(tupla);
             container.getBlocos().add(novo);
             container.atualizaIdLivreControle(1);
         } else { //bloco maior que tamanho da tupla
             if (container.tamanhoDoBloco() - container.getBlocoId(idBlocoLivre).getTamanhoBloco() > tupla.length) {
-                System.out.println("Salvou tupla no bloco: " + idBlocoLivre);
-                System.out.println("idmaiorq" + idBlocoLivre + "tamanho" + container.getBlocoId(idBlocoLivre).getTamanhoBloco());
+//                log.info("Salvou tupla no bloco: " + idBlocoLivre);
+//                log.info("idmaiorq" + idBlocoLivre + "tamanho" + container.getBlocoId(idBlocoLivre).getTamanhoBloco());
                 container.getBlocoId(idBlocoLivre).adicionarTuplaNoBloco(tupla);
                 Gravacao.salvaArquivo(container);
             } else { //bloco menor que tamanho da tupla
-                System.out.println("idmenorq" + idBlocoLivre + "tamanho" + container.getBlocoId(idBlocoLivre).getTamanhoBloco());
+//                log.info("idmenorq" + idBlocoLivre + "tamanho" + container.getBlocoId(idBlocoLivre).getTamanhoBloco());
                 Bloco novo = new Bloco(idBlocoLivre + 1, container.getContainerId());
-                System.out.println("Gerado bloco de ID: " + (idBlocoLivre + 1));
+//                log.info("Gerado bloco de ID: " + (idBlocoLivre + 1));
                 novo.adicionarTuplaNoBloco(tupla);
                 container.getBlocos().add(novo);
                 container.atualizaIdLivreControle(idBlocoLivre + 1);

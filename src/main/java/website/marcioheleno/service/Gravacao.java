@@ -2,6 +2,7 @@ package website.marcioheleno.service;
 
 import website.marcioheleno.model.bloco.container.Container;
 import website.marcioheleno.model.bloco.dados.Bloco;
+import website.marcioheleno.utils.ConverterUltils;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -14,14 +15,14 @@ public class Gravacao {
 
     public static void salvaArquivo(Container container) {
 
-        int tamanho = Bloco.byteToInt(Bloco.getBytes(container.getControle().getDados(), 1, 3));
+        int tamanho = ConverterUltils.byteToInt(ConverterUltils.getBytes(container.getControle().getDados(), 1, 3));
 
         byte[] bytes = new byte[tamanho + (container.getBlocos().size() * tamanho)];
 
-        bytes = Bloco.bytePlusbyte(bytes, container.getControle().getDados(), 0);
+        bytes = ConverterUltils.bytePlusbyte(bytes, container.getControle().getDados(), 0);
 
         for (int i = 0, j = 0; i < container.getBlocos().size(); i++, j += 8192) {
-            bytes = Bloco.bytePlusbyte(bytes, container.getBlocos().get(i).getDados(), j);
+            bytes = ConverterUltils.bytePlusbyte(bytes, container.getBlocos().get(i).getDados(), j);
         }
 
         FileOutputStream stream = null;
@@ -61,16 +62,16 @@ public class Gravacao {
             //Ler Blocos, e dentro dos blocos ler as tuplas e começar a salvar esses strings em uma grande string pra salvar no TXT
             for (Bloco bloco : container.getBlocos()) {
                 idContainer = bloco.getDados()[0];
-                idBloco = Bloco.byteToInt(Bloco.getBytes(bloco.getDados(), 1, 3));
+                idBloco = ConverterUltils.byteToInt(ConverterUltils.getBytes(bloco.getDados(), 1, 3));
 
-                while (controle < Bloco.byteToInt(Bloco.getBytes(bloco.getDados(), 5, 3))) {
+                while (controle < ConverterUltils.byteToInt(ConverterUltils.getBytes(bloco.getDados(), 5, 3))) {
                     text += String.valueOf(idContainer) + "|" + String.valueOf(idBloco) + "|";
                     // Calcula o espaço ocupado pela tupla no bloco
-                    tamTupla = Bloco.byteToInt(Bloco.getBytes(bloco.getDados(), controle, 4)) + 2 * metaDados.size();
+                    tamTupla = ConverterUltils.byteToInt(ConverterUltils.getBytes(bloco.getDados(), controle, 4)) + 2 * metaDados.size();
 
                     //Pega os dados da tupla
                     controle += 4;
-                    tuplaByte = Bloco.getBytes(bloco.getDados(), controle, tamTupla);
+                    tuplaByte = ConverterUltils.getBytes(bloco.getDados(), controle, tamTupla);
 
                     for (int i = 0, j = 0; i < tamTupla + 1; i++, j++) {
 
@@ -80,12 +81,12 @@ public class Gravacao {
                                 //Teste
                                 dados = new String(auxEntrada);
                                 text += dados + "|";
-                                System.out.println(dados);
+//                                System.out.println(dados);
 
                                 if (i == tamTupla - 1 || i == tamTupla) break;
                                 //Atualização do Controle
                                 controleTupla += tamEntrada;
-                                tamEntrada = Bloco.byte2ToInt(Bloco.getBytes(tuplaByte, controleTupla, 2));
+                                tamEntrada = ConverterUltils.byte2ToInt(ConverterUltils.getBytes(tuplaByte, controleTupla, 2));
                                 auxEntrada = new byte[tamEntrada];
                                 auxEntrada = new byte[3];
                                 i = controleTupla - 1;
@@ -95,7 +96,7 @@ public class Gravacao {
                             //Divide por cada dado na tuplaByte e salva em String
                             if (auxEntrada.length == 3) {
                                 if (i < tamTupla - 1) {
-                                    tamEntrada = Bloco.byte2ToInt(Bloco.getBytes(tuplaByte, controleTupla, 2));
+                                    tamEntrada = ConverterUltils.byte2ToInt(ConverterUltils.getBytes(tuplaByte, controleTupla, 2));
                                     auxEntrada = new byte[tamEntrada];
                                     i = controleTupla + 1;
                                     j = -1;
@@ -136,9 +137,9 @@ public class Gravacao {
         int index = 0;
 
 
-        header = Bloco.getBytes(controle.getDados(), 11, Bloco.byte2ToInt(Bloco.getBytes(controle.getDados(), 9, 2)));
-        String headerString = Bloco.byteToString(header);
-        System.out.println(headerString);
+        header = ConverterUltils.getBytes(controle.getDados(), 11, ConverterUltils.byte2ToInt(ConverterUltils.getBytes(controle.getDados(), 9, 2)));
+        String headerString = ConverterUltils.byteToString(header);
+//        System.out.println(headerString);
 
         String[] metaDados = headerString.split("[|]");
         for (String string : metaDados) {

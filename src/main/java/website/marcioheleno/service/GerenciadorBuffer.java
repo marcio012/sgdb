@@ -3,6 +3,7 @@ package website.marcioheleno.service;
 import website.marcioheleno.model.bloco.container.Container;
 import website.marcioheleno.model.bloco.dados.Bloco;
 import website.marcioheleno.model.bloco.pagina.Pagina;
+import website.marcioheleno.utils.ConverterUltils;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -28,7 +29,7 @@ public class GerenciadorBuffer {
         for (Container container : Leitura.containers) {
             for (Bloco bloco : container.getBlocos()) {
                 idContainer = bloco.getDados()[0];
-                idBloco = Bloco.byteToInt(Bloco.getBytes(bloco.getDados(), 1, 3));
+                idBloco = ConverterUltils.byteToInt(ConverterUltils.getBytes(bloco.getDados(), 1, 3));
                 Pagina p = new Pagina(idContainer, idBloco, 0);
 
                 if (idBloco % 2 == 0) {
@@ -74,7 +75,7 @@ public class GerenciadorBuffer {
         for (Container container : Leitura.containers) {
             if (pagina.getFileID() == container.getControle().getDados()[0]) {
                 for (Bloco bloco : container.getBlocos()) {
-                    if (pagina.getBlocoID() == Bloco.byteToInt(Bloco.getBytes(bloco.getDados(), 1, 3))) return bloco;
+                    if (pagina.getBlocoID() == ConverterUltils.byteToInt(ConverterUltils.getBytes(bloco.getDados(), 1, 3))) return bloco;
                 }
             }
         }
@@ -128,7 +129,7 @@ public class GerenciadorBuffer {
 
                 //Verificação de existência do Bloco no buffer
                 if (idRequisicaoCont == blocoBuff.getDados()[0] &&
-                    idRequisicaoBloco == Bloco.byteToInt(Bloco.getBytes(blocoBuff.getDados(), 1, 3))) {
+                    idRequisicaoBloco == ConverterUltils.byteToInt(ConverterUltils.getBytes(blocoBuff.getDados(), 1, 3))) {
                     //add Hit
                     cacheHitMiss[0]++;
                     System.out.println("Hit: " + cacheHitMiss[0]);

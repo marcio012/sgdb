@@ -4,6 +4,10 @@
     <list default="true" id="fe8c0847-9109-47e7-a2b4-5902bb364964" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/sonarIssues.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarIssues.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/website/marcioheleno/model/bloco/container/Container.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/website/marcioheleno/model/bloco/container/Container.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/website/marcioheleno/model/bloco/dados/Bloco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/website/marcioheleno/model/bloco/dados/Bloco.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/website/marcioheleno/model/bloco/tupla/Tupla.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/website/marcioheleno/model/bloco/tupla/Tupla.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/website/marcioheleno/service/GerenciadorBuffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/website/marcioheleno/service/GerenciadorBuffer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/website/marcioheleno/service/Gravacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/website/marcioheleno/service/Gravacao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/website/marcioheleno/service/Leitura.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/website/marcioheleno/service/Leitura.java" afterDir="false" />
     </list>
@@ -117,7 +121,7 @@
       <updated>1566905336447</updated>
       <workItem from="1566905349556" duration="7826000" />
       <workItem from="1566963603488" duration="262000" />
-      <workItem from="1567082649865" duration="2207000" />
+      <workItem from="1567082649865" duration="5353000" />
     </task>
     <servers />
   </component>
@@ -142,8 +146,28 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/website/marcioheleno/service/Gravacao.java</url>
-          <line>63</line>
+          <line>64</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/website/marcioheleno/service/Leitura.java</url>
+          <line>91</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/website/marcioheleno/model/bloco/dados/Bloco.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/website/marcioheleno/model/bloco/dados/Bloco.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/website/marcioheleno/App.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
