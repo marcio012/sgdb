@@ -34,16 +34,11 @@ public class GerenciadorBuffer {
 
                 if (idBloco % 2 == 0) {
                     int repeticoes = rand.nextInt(paginasRepetidas.size());
-
                     for (int i = 1; i <= 3; i++) {
                         paginasRepetidas.add(paginasRepetidas.get(repeticoes));
                     }
-
-
                 }
-
                 int repeticoes = rand.nextInt(2) + 1;
-
                 for (int i = 1; i <= 3; i++) {
                     paginasRepetidas.add(p);
                 }
@@ -52,7 +47,6 @@ public class GerenciadorBuffer {
         }
 
         executaBuffer(paginasRepetidas);
-
 
     }
 
@@ -64,8 +58,7 @@ public class GerenciadorBuffer {
         System.out.println("Cache Miss: 		" + cacheHitMiss[1]);
         System.out.println("Taxa de Hit:		"
             + df.format(((double) cacheHitMiss[0] / cacheHitMiss[2]) * 100) + "%");
-        System.out
-            .println("Taxa de Miss:		"
+        System.out.println("Taxa de Miss:		"
                 + df.format(((double) cacheHitMiss[1] / cacheHitMiss[2]) * 100)
                 + "%");
     }

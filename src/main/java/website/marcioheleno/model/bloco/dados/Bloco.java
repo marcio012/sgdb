@@ -8,7 +8,7 @@ import java.nio.ByteBuffer;
 @Data
 public class Bloco {
 
-    private int tamanho = 8192;
+    private int tamanho = 10000;
     private byte[] dados;
 
     /*

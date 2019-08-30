@@ -21,3 +21,7 @@ g
 7src/main/java/website/marcioheleno/service/Leitura.java,6/6/668a576554fe73bae8f7491ba03561f784cffcf0
 7
 pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
+>
+grava-tpch.txt,c/b/cbe92d8d42672d6077641b62cce0a22e935c0fc7
+<
+gravacao.txt,6/4/648d72fa16b95119db8008dce1082b29ea48c94e

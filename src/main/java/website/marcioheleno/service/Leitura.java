@@ -27,7 +27,7 @@ public class Leitura {
         log.info("/n/n/n");
         log.info("TESTE BUFFER/n/n/n");
 
-        GerenciadorBuffer.geraRequisicoes();
+//        GerenciadorBuffer.geraRequisicoes();
         // TODO: Chamada de exportação do arquivo para outro txt
         Gravacao.exportaArquivoTxt(containers);
 

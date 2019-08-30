@@ -28,7 +28,7 @@ public class Gravacao {
         FileOutputStream stream = null;
 
         try {
-            stream = new FileOutputStream("modi-tpch.txt");
+            stream = new FileOutputStream("grava-tpch.txt");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
