@@ -2,14 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe8c0847-9109-47e7-a2b4-5902bb364964" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarIssues.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarIssues.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/a/3a99c7b38811edbfc15fa43b90d1e3ad84828c14" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/a/3a99c7b38811edbfc15fa43b90d1e3ad84828c14" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/0/608298df6ecc7bbbfe54b368f97d3a333c37665e" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/0/608298df6ecc7bbbfe54b368f97d3a333c37665e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/6/668a576554fe73bae8f7491ba03561f784cffcf0" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/6/668a576554fe73bae8f7491ba03561f784cffcf0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/2/82bfa4e697a816000fb28685e57635479a1f6da3" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/2/82bfa4e697a816000fb28685e57635479a1f6da3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/5/b52932b67b616a40646a891ed6370f4c1c0bed1e" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/5/b52932b67b616a40646a891ed6370f4c1c0bed1e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/6/b6dd206b5bed50a1b16a393e602483acc08e3a42" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/6/b6dd206b5bed50a1b16a393e602483acc08e3a42" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/f/dfe90582456cf01bc43d4c21b46d4e640cbf7022" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/f/dfe90582456cf01bc43d4c21b46d4e640cbf7022" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/website/marcioheleno/model/bloco/container/Container.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/website/marcioheleno/model/bloco/container/Container.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/website/marcioheleno/model/bloco/dados/Bloco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/website/marcioheleno/model/bloco/dados/Bloco.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/website/marcioheleno/model/bloco/tupla/Tupla.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/website/marcioheleno/model/bloco/tupla/Tupla.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/website/marcioheleno/service/GerenciadorBuffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/website/marcioheleno/service/GerenciadorBuffer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/website/marcioheleno/service/Gravacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/website/marcioheleno/service/Gravacao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/website/marcioheleno/service/Leitura.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/website/marcioheleno/service/Leitura.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -121,7 +123,8 @@
       <updated>1566905336447</updated>
       <workItem from="1566905349556" duration="7826000" />
       <workItem from="1566963603488" duration="262000" />
-      <workItem from="1567082649865" duration="5353000" />
+      <workItem from="1567082649865" duration="6025000" />
+      <workItem from="1567712509967" duration="237000" />
     </task>
     <servers />
   </component>

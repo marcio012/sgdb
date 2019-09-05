@@ -21,3 +21,9 @@ g
 7src/main/java/website/marcioheleno/service/Leitura.java,6/6/668a576554fe73bae8f7491ba03561f784cffcf0
 7
 pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
+=
+forn-tpch.txt,8/e/8e2923e8c39aad1d84e7d6b91b17a3f7bd2c3b71
+m
+=src/main/java/website/marcioheleno/utils/ConverterUltils.java,1/5/15fe599ad4ce11828c4e20bf8b67da43b0d03066
+=
+modi-tpch.txt,e/e/eea62d314f84a1880d487350e55ee5f7d5a6d441
