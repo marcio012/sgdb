@@ -1,21 +1,21 @@
 
+Usquid:S1135""2Complete the task associated to this TODO comment.(§ĞñÅûÿÿÿÿ8Èê¾ìÍ-
+Qsquid:S1481B"3Remove this unused "arquivoEscrita" local variable.(Ï×äÔ8ËÂ¸ìÍ-
+hsquid:CommentedOutCodeLine/"<This block of commented-out lines of code should be removed.(Ò÷¹88¨»¾íÍ-
+Usquid:S1135K"2Complete the task associated to this TODO comment.(ß‹È‹üÿÿÿÿ8éÒ¹ìÍ-
+isquid:CommentedOutCodeLineL"<This block of commented-out lines of code should be removed.(ÄÒ8ËÂ¸ìÍ-
 |squid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÖåÆ·øÿÿÿÿ8Œ×›Í-
-isquid:CommentedOutCodeLinec"<This block of commented-out lines of code should be removed.(‹Âéš8Ù¿íÍ-
-qsquid:S2095("NUse try-with-resources or close this "RandomAccessFile" in a "finally" clause.(ú¤à®şÿÿÿÿ8Œ×›Í-
-nsquid:CommentedOutCodeLine]"<This block of commented-out lines of code should be removed.(·ıöıÿÿÿÿ8ôŞ¾íÍ-
-Fsquid:S1148S"#Use a logger to log this exception.(µÎ¡øÿÿÿÿ8ìïµìÍ-
+Fsquid:S1148T"#Use a logger to log this exception.(µÎ¡øÿÿÿÿ8ìïµìÍ-
 @squid:S2386"Make this member "protected".(ÖåÆ·øÿÿÿÿ8Œ×›Í-
 Ssquid:S1444"0Make this "public static containers" field final(ÖåÆ·øÿÿÿÿ8Œ×›Í-
-Qsquid:S1481@"3Remove this unused "arquivoEscrita" local variable.(Ï×äÔ8ËÂ¸ìÍ-
-hsquid:CommentedOutCodeLine,"<This block of commented-out lines of code should be removed.(Ò÷¹88¨‚¾íÍ-
-isquid:CommentedOutCodeLineK"<This block of commented-out lines of code should be removed.(ÄÒ8ËÂ¸ìÍ-
-Ssquid:S1172;"5Remove this unused method parameter "arquivoDestino".(‡¬Óô8ìïµìÍ-
-lsquid:S2095?"NUse try-with-resources or close this "RandomAccessFile" in a "finally" clause.(íŒ÷æ8ìïµìÍ-
-lsquid:S2095@"NUse try-with-resources or close this "RandomAccessFile" in a "finally" clause.(Ï×äÔ8Ì¬ÚëÍ-
-hsquid:CommentedOutCodeLineF"<This block of commented-out lines of code should be removed.(Ò÷¹88¨»¾íÍ-
-nsquid:CommentedOutCodeLineh"<This block of commented-out lines of code should be removed.(—ĞÿËùÿÿÿÿ8¿™¿íÍ-
-Fsquid:S11486"#Use a logger to log this exception.(µÎ¡øÿÿÿÿ8ìïµìÍ-
-Usquid:S1135J"2Complete the task associated to this TODO comment.(ß‹È‹üÿÿÿÿ8éÒ¹ìÍ-
-Usquid:S1135"2Complete the task associated to this TODO comment.(§ĞñÅûÿÿÿÿ8Èê¾ìÍ-
+lsquid:S2095B"NUse try-with-resources or close this "RandomAccessFile" in a "finally" clause.(Ï×äÔ8Ì¬ÚëÍ-
+hsquid:CommentedOutCodeLineG"<This block of commented-out lines of code should be removed.(Ò÷¹88¨‚¾íÍ-
+nsquid:CommentedOutCodeLine_"<This block of commented-out lines of code should be removed.(·ıöıÿÿÿÿ8ôŞ¾íÍ-
+Ssquid:S1172="5Remove this unused method parameter "arquivoDestino".(‡¬Óô8ìïµìÍ-
+lsquid:S2095A"NUse try-with-resources or close this "RandomAccessFile" in a "finally" clause.(íŒ÷æ8ìïµìÍ-
 "squid:ClassVariableVisibilityCheck"VMake containers a static final constant or non-public and provide accessors if needed.(ÖåÆ·øÿÿÿÿ8Œ×›Í-
-isquid:CommentedOutCodeLinej"<This block of commented-out lines of code should be removed.(ó‡“8Şµ¿íÍ-
+isquid:CommentedOutCodeLinel"<This block of commented-out lines of code should be removed.(ó‡“8ŠÚ“ÙÒ-
+Fsquid:S11489"#Use a logger to log this exception.(µÎ¡øÿÿÿÿ8ìïµìÍ-
+nsquid:CommentedOutCodeLinej"<This block of commented-out lines of code should be removed.(—ĞÿËùÿÿÿÿ8Şµ¿íÍ-
+qsquid:S2095+"NUse try-with-resources or close this "RandomAccessFile" in a "finally" clause.(ú¤à®şÿÿÿÿ8Œ×›Í-
+isquid:CommentedOutCodeLinee"<This block of commented-out lines of code should be removed.(‹Âéš8Ù¿íÍ-

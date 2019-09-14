@@ -27,3 +27,8 @@ m
 =src/main/java/website/marcioheleno/utils/ConverterUltils.java,1/5/15fe599ad4ce11828c4e20bf8b67da43b0d03066
 =
 modi-tpch.txt,e/e/eea62d314f84a1880d487350e55ee5f7d5a6d441
+:
+
+.gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
+?
+teste-menor.txt,e/2/e2c2f6531aad18797c1945fb2a0b381cdcc1dd0b

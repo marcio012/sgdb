@@ -1,5 +1,7 @@
 # ide
 .idea
+#.project
+#.classpath
 # Compiled class file
 *.class
 
