@@ -1,24 +1,0 @@
-
-jsquid:CommentedOutCodeLine’"<This block of commented-out lines of code should be removed.(ãÙ’¾8Ó¿ºíÍ-
-Tsquid:S1153D"1Directly append the argument of String.valueOf().(Ù´±şÿÿÿÿ8Ö®ššÍ-
-?squid:S1643D"Use a StringBuilder instead.(Ù´±şÿÿÿÿ8Ö®ššÍ-
-Fsquid:S16594"(Declare "tamEntrada" on a separate line.(×©Ù‘8Ö®ššÍ-
-nsquid:CommentedOutCodeLineV"<This block of commented-out lines of code should be removed.(æ×ˆ¡ûÿÿÿÿ8ÄêÉíÍ-
-}squid:S2293‹"YReplace the type specification in this constructor call with the diamond operator ("<>").(ŠÍ™Şşÿÿÿÿ8İØœšÍ-
- squid:ForLoopCounterChangedCheckj"XRefactor the code in order to not assign to this loop counter from within the loop body.(ü²ˆøÿÿÿÿ8Ö®ššÍ-
-usquid:S37760"RRefactor this method to reduce its Cognitive Complexity from 44 to the 15 allowed.(ÔÆ€šÿÿÿÿÿ8Ö®ššÍ-
-Ksquid:S16592"(Declare "auxEntrada" on a separate line.(°¾•ëùÿÿÿÿ8Ö®ššÍ-
-Fsquid:S1148&"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ö®ššÍ-
-‹ squid:ForLoopCounterChangedChecka"XRefactor the code in order to not assign to this loop counter from within the loop body.(´™ß×8Ö®ššÍ-
-Hsquid:S16595"%Declare "idBloco" on a separate line.(î—¸½şÿÿÿÿ8Ö®ššÍ-
-Fsquid:S1148!"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ö®ššÍ-
-Nsquid:S16593"+Declare "controleTupla" on a separate line.(àØü¤şÿÿÿÿ8Ö®ššÍ-
-‹ squid:ForLoopCounterChangedCheck`"XRefactor the code in order to not assign to this loop counter from within the loop body.(½ºáü8Ö®ššÍ-
-:squid:S1643t"Use a StringBuilder instead.(‹ÖÅ8Ö®ššÍ-
-Rsquid:S1066f"/Merge this if statement with the enclosing one.(ôßÊüÿÿÿÿ8Ö®ššÍ-
-‹ squid:ForLoopCounterChangedCheckk"XRefactor the code in order to not assign to this loop counter from within the loop body.(İáºı8Ö®ššÍ-
-Fsquid:S1148+"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ö®ššÍ-
-Gsquid:S1148…"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ö®ššÍ-
-]squid:S1118":Add a private constructor to hide the implicit public one.(¬±£ïûÿÿÿÿ8Ö®ššÍ-
-?squid:S1643U"Use a StringBuilder instead.(§˜Õúÿÿÿÿ8Ö®ššÍ-
-gsquid:S2259$"DA "NullPointerException" could be thrown; "stream" is nullable here.(şªÏàøÿÿÿÿ8Ö®ššÍ-

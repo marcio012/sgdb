@@ -1,54 +1,0 @@
-
-Rsquid:S1481ë".Remove this unused "auxBuffer" local variable.(÷œ²éşÿÿÿÿ8ø«€šÍ-
-Xsquid:S1118":Add a private constructor to hide the implicit public one.(ÃŠ‡8ø«€šÍ-
-V
-squid:S106]"9Replace this use of System.out or System.err by a logger.(Œäš½8ø«€šÍ-
-Msquid:S1659"/Declare "idRequisicaoBloco" on a separate line.(Ù¬éµ8ø«€šÍ-
-jsquid:CommentedOutCodeLine–"<This block of commented-out lines of code should be removed.(òÆ´…8ø«€šÍ-
-{
-squid:S135w"YReduce the total number of break and continue statements in this loop to use at most one.(‡¼èµøÿÿÿÿ8ø«€šÍ-
-Dsquid:S1659"&Declare "controle" on a separate line.(Ù¬éµ8ø«€šÍ-
-}squid:S1450"_Remove the "idRequisicaoCont" field and declare it as a local variable in the relevant methods.(Ù¬éµ8ø«€šÍ-
-V
-squid:S106?"9Replace this use of System.out or System.err by a logger.(³ë…¨8ø«€šÍ-
-[
-squid:S1069"9Replace this use of System.out or System.err by a logger.(´ñÈøøÿÿÿÿ8ƒå“ÙÒ-
-W
-squid:S106ƒ"9Replace this use of System.out or System.err by a logger.(¿éŒö8ø«€šÍ-
-vsquid:S3776´"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(¥Ï®òşÿÿÿÿ8ø«€šÍ-
-Lsquid:S1659".Declare "idRequisicaoCont" on a separate line.(Ù¬éµ8ø«€šÍ-
-esquid:S4143ï"FVerify this is the index that was intended; it was already set before.(âÓÁ½8ø«€šÍ-
-Hsquid:S1659"%Declare "idBloco" on a separate line.(î—¸½şÿÿÿÿ8ø«€šÍ-
-[
-squid:S106:"9Replace this use of System.out or System.err by a logger.(‰ØœŠûÿÿÿÿ8ø«€šÍ-
-Osquid:S1481T",Remove this unused "posBuff" local variable.(ô±Øøÿÿÿÿ8ø«€šÍ-
-V
-squid:S106;"9Replace this use of System.out or System.err by a logger.(›œ–’8ƒå“ÙÒ-
-jsquid:CommentedOutCodeLineÉ"<This block of commented-out lines of code should be removed.(Å¬£º8ø«€šÍ-
-Bsquid:S1659"$Declare "idCont" on a separate line.(Ù¬éµ8ø«€šÍ-
-~squid:S1450"`Remove the "idRequisicaoBloco" field and declare it as a local variable in the relevant methods.(Ù¬éµ8ø«€šÍ-
-Isquid:S1481S"+Remove this unused "posLRU" local variable.(ù’Óô8ø«€šÍ-
-Hsquid:S1068"*Remove this unused "idBuff" private field.(Ù¬éµ8ø«€šÍ-
-jsquid:CommentedOutCodeLine‡"<This block of commented-out lines of code should be removed.(ìš¤¾8ø«€šÍ-
-Œ squid:ForLoopCounterChangedCheckÊ"XRefactor the code in order to not assign to this loop counter from within the loop body.(øËô8ø«€šÍ-
-|
-squid:S135¿"YReduce the total number of break and continue statements in this loop to use at most one.(ËÇ»úÿÿÿÿ8ø«€šÍ-
-[
-squid:S106^"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8ø«€šÍ-
-Bsquid:S1659"$Declare "idBuff" on a separate line.(Ù¬éµ8ø«€šÍ-
-Isquid:S1068"+Remove this unused "idBloco" private field.(Ù¬éµ8ø«€šÍ-
-Hsquid:S1068"*Remove this unused "idCont" private field.(Ù¬éµ8ø«€šÍ-
-[
-squid:S106<"9Replace this use of System.out or System.err by a logger.(Ä²Š®øÿÿÿÿ8ø«€šÍ-
-Jsquid:S1068",Remove this unused "pontoMud" private field.(Ù¬éµ8ø«€šÍ-
-V
-squid:S106="9Replace this use of System.out or System.err by a logger.(³ë…¨8ø«€šÍ-
-Lsquid:S1481+"/Remove this unused "repeticoes" local variable.(­Îå8ø«€šÍ-
-Dsquid:S1659"&Declare "pontoMud" on a separate line.(Ù¬éµ8ø«€šÍ-
-|squid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(–¤Ã¾ÿÿÿÿÿ8ø«€šÍ-
-nsquid:CommentedOutCodeLinem"<This block of commented-out lines of code should be removed.(î¼Üùÿÿÿÿ8ø«€šÍ-
-W
-squid:S106š"9Replace this use of System.out or System.err by a logger.(ƒ·ª©8ø«€šÍ-
-Asquid:S2119"Save and re-use this "Random".(šŸ«íøÿÿÿÿ8ø«€šÍ-
-V
-squid:S106q"9Replace this use of System.out or System.err by a logger.(ƒ·ª©8ø«€šÍ-
