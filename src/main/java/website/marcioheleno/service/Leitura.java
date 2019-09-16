@@ -17,8 +17,12 @@ public class Leitura {
 	public static List<Container> containers = new ArrayList<Container>();
 
 	public void criaContainers() {
-		String arquivo1 = "teste-menor.txt";
-		String arquivo2 = "teste-menor2.txt";
+//		TODO: Uso em teste
+//		String arquivo1 = "assets/teste-menor.txt";
+//		String arquivo2 = "assets/teste-menor2.txt";
+
+		String arquivo1 = "assets/forn-tpch.txt";
+		String arquivo2 = "assets/cli-tpch.txt";
 
 		log.info("local arquivo: " + arquivo1);
 		iniciarLeitura(arquivo1);
@@ -44,40 +48,13 @@ public class Leitura {
 
 			String linha = arquivo.readLine();
 			Container container = new Container(linha);
-			log.info("Gerado Bloco de Controle");
+            log.info("Bloco de Controle Gerado");
 
 			while ((linha = arquivo.readLine()) != null) {
 				adicionarTupla(Tupla.montaTuplaByte(separador(linha)), container);
 			}
 
 			arquivo.close();
-			containers.add(container);
-
-		} catch (IOException | NullPointerException exp) {
-			exp.printStackTrace();
-		}
-	}
-
-	void leituraEGravacao(String arquivoCaminho, String arquivoDestino) {
-		log.info("Iniciando leitura e gravação do arquivo...");
-
-		try {
-			RandomAccessFile arquivoLeitura = new RandomAccessFile(arquivoCaminho, "rw");
-			RandomAccessFile arquivoEscrita = new RandomAccessFile(arquivoCaminho, "rw");
-
-			String linhaLida = arquivoLeitura.readLine();
-
-			Container container = new Container(linhaLida);
-//            log.info("Gerado Bloco de Controle");
-
-			while ((linhaLida = arquivoLeitura.readLine()) != null) {
-				adicionarTupla(Tupla.montaTuplaByte(separador(linhaLida)), container);
-				// TODO: chamar a escrita.
-//                arquivoEscrita.write(linhaLida.getBytes());
-
-			}
-
-			arquivoLeitura.close();
 			containers.add(container);
 
 		} catch (IOException | NullPointerException exp) {
@@ -98,18 +75,17 @@ public class Leitura {
 			container.atualizaIdLivreControle(1);
 		} else { // bloco maior que tamanho da tupla
 			if (container.tamanhoDoBloco() - container.getBlocoId(idBlocoLivre).getTamanhoBloco() > tupla.length) {
-//                log.info("Salvou tupla no bloco: " + idBlocoLivre);
-//                log.info("idmaiorq" + idBlocoLivre + "tamanho" + container.getBlocoId(idBlocoLivre).getTamanhoBloco());
+                log.fine("Salvou tupla no bloco: " + idBlocoLivre);
+                log.info("idmaiorq" + idBlocoLivre + "tamanho" + container.getBlocoId(idBlocoLivre).getTamanhoBloco());
 				container.getBlocoId(idBlocoLivre).adicionarTuplaNoBloco(tupla);
-				Gravacao.salvaArquivo(container);
+//				Gravacao.salvaArquivo(container);
 			} else { // bloco menor que tamanho da tupla
-//                log.info("idmenorq" + idBlocoLivre + "tamanho" + container.getBlocoId(idBlocoLivre).getTamanhoBloco());
+                log.fine("idmenorq" + idBlocoLivre + "tamanho" + container.getBlocoId(idBlocoLivre).getTamanhoBloco());
 				Bloco novo = new Bloco(idBlocoLivre + 1, container.getContainerId());
                 log.info("Gerado bloco de ID: " + (idBlocoLivre + 1));
 				novo.adicionarTuplaNoBloco(tupla);
 				container.getBlocos().add(novo);
 				container.atualizaIdLivreControle(idBlocoLivre + 1);
-
 			}
 		}
 	}

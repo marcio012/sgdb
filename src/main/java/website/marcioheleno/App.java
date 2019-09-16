@@ -11,6 +11,5 @@ public class App {
         Leitura leitura = new Leitura();
         leitura.criaContainers();
 
-        //GerenciadorBuffer.geraRequisicoes(leitor.container);
     }
 }

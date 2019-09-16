@@ -1,5 +1,6 @@
 package website.marcioheleno.model.bloco.tupla;
 
+import website.marcioheleno.model.bloco.dados.Bloco;
 import website.marcioheleno.utils.ConverterUltils;
 
 public class Tupla {
@@ -19,6 +20,11 @@ public class Tupla {
             novaTupla = ConverterUltils.bytePlusbyte(novaTupla, ConverterUltils.intToByte(somaTotalBytes(tupla, coluna)), 0);
             novaTupla = ConverterUltils.bytePlusbyte(novaTupla, ConverterUltils.getBytes(tupla, 4, tupla.length - 4), 4);
             tupla = ConverterUltils.bytePlusbyte(novaTupla, coluna, tupla.length);
+
+            //System.out.println("eae");
+			/*novaTupla = Bloco.bytePlusbyte(novaTupla, Bloco.intToByte(somaTotalBytes(Bloco.getBytes(tupla, 0, 4), coluna)), 0);
+			novaTupla = Bloco.bytePlusbyte(novaTupla, Bloco.getBytes(tupla, 4, tupla.length - 4), 4);
+            aux = Bloco.bytePlusbyte(novaTupla, coluna, tupla.length - 4);*/
         }
 
         return tupla;
