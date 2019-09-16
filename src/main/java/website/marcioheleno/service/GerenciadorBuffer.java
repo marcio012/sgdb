@@ -13,8 +13,8 @@ import website.marcioheleno.utils.ConverterUltils;
 public class GerenciadorBuffer {
 
 	// Declaração
-	private static Lru lru = new Lru(1000);
-	private static Buffer buffer = new Buffer(1000);
+	private static Lru lru = new Lru(680);
+	private static Buffer buffer = new Buffer(680);
 
 	private static int[] cacheHitMiss = new int[3];
 
@@ -106,7 +106,7 @@ public class GerenciadorBuffer {
 
 				// Implementar LRU
 				adicionaPaginaLRU(pagina);
-				// lru.setLru(ordenaVetorLRU(lru.getLru(), 0, 0, pagina));
+//				lru.setLru(ordenaVetorLRU(lru.getLru(), 0, 0, pagina));
 
 				// Add Miss
 				cacheHitMiss[1]++;
@@ -132,7 +132,7 @@ public class GerenciadorBuffer {
 
 					// Implementar LRU
 					ordenaLRU(pagina);
-					// lru.setLru(ordenaVetorLRU(lru.getLru(), controle, controle, pagina));
+//      			lru.setLru(ordenaVetorLRU(lru.getLru(), controle, controle, pagina));
 					status = 1;
 					break;
 				}
@@ -189,6 +189,11 @@ public class GerenciadorBuffer {
 		}
 
 		for (int i = 0; i < vecLru.length - espacoLivre; i++) {
+
+			System.out.println(vecLru[i].getFileID());
+			System.out.println(pgNovo.getFileID());
+			System.out.println(vecLru[i].getBlocoID());
+			System.out.println(pgNovo.getBlocoID());
 
 			if (vecLru[i].getFileID() == pgNovo.getFileID() && vecLru[i].getBlocoID() == pgNovo.getBlocoID()) {
 				if (i == 0) {

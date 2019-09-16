@@ -13,3 +13,8 @@ COD_FORN[I(6)]|NOME_FORN[A(25)]|END_FORN[A(40)]|NASC_FORN[I(4)]|FON_FORN[A(15)]|
 511|Supplier#000000511|RWNdTEe,VJFarN4Pu7Xl|23|33-476-213-8045|t the quickly even deposits. carefully careful ideas sleep slyly bold deposits. unusual, even accoun|
 5629|Supplier#000005629|SmHC2j4zM5QuUKmnob|15|25-317-111-8884| above the unusual deposits detect quickly quickly ironic orbits. express, unusual fo|
 1493|Supplier#000001493|MEIytTTK27Z1YIyJ4fRh3FsLUJEzQxaM|0|10-862-591-4491| slyly final pinto beans cajole regular i|
+1794|Supplier#000001794|QY4ygC456AABXtvwTOlMsYUGm0HM|16|26-114-642-2939|nticingly slow deposits wake quickly. special, final instructions|
+7963|Supplier#000007963|uuOvxqm37CvfJ0IEGxKo988RD|16|26-587-366-5667|deas. express, ironic packages boost furiousl|
+4350|Supplier#000004350|zNUzOPG8tpClDjNHo261t6tsoyo8uolPuG|1|11-991-829-4202| slyly final platelets. even multipl|
+9008|Supplier#000009008|tqXQySU5c4Pvry|15|25-100-733-5634|furiously after the daringly unus|
+9627|Supplier#000009627|uhVxlR2ZdXa|1|11-459-329-1759| instructions. fluffily regular realms sleep. furiously quick forges|

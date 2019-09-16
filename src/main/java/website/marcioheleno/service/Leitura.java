@@ -17,8 +17,8 @@ public class Leitura {
 	public static List<Container> containers = new ArrayList<Container>();
 
 	public void criaContainers() {
-		String arquivo1 = "forn-tpch.txt";
-		String arquivo2 = "cli-tpch.txt";
+		String arquivo1 = "teste-menor.txt";
+		String arquivo2 = "teste-menor2.txt";
 
 		log.info("local arquivo: " + arquivo1);
 		iniciarLeitura(arquivo1);
@@ -44,7 +44,7 @@ public class Leitura {
 
 			String linha = arquivo.readLine();
 			Container container = new Container(linha);
-//            log.info("Gerado Bloco de Controle");
+			log.info("Gerado Bloco de Controle");
 
 			while ((linha = arquivo.readLine()) != null) {
 				adicionarTupla(Tupla.montaTuplaByte(separador(linha)), container);
@@ -92,7 +92,7 @@ public class Leitura {
 		// se nao exitir bloco, deve ser criado
 		if (idBlocoLivre == 0) {
 			Bloco novo = new Bloco(1, container.getContainerId());
-//            log.info("Gerado bloco de ID: " + 1);
+            log.info("Gerado bloco de ID: " + 1);
 			novo.adicionarTuplaNoBloco(tupla);
 			container.getBlocos().add(novo);
 			container.atualizaIdLivreControle(1);
@@ -105,11 +105,11 @@ public class Leitura {
 			} else { // bloco menor que tamanho da tupla
 //                log.info("idmenorq" + idBlocoLivre + "tamanho" + container.getBlocoId(idBlocoLivre).getTamanhoBloco());
 				Bloco novo = new Bloco(idBlocoLivre + 1, container.getContainerId());
-//                log.info("Gerado bloco de ID: " + (idBlocoLivre + 1));
+                log.info("Gerado bloco de ID: " + (idBlocoLivre + 1));
 				novo.adicionarTuplaNoBloco(tupla);
 				container.getBlocos().add(novo);
 				container.atualizaIdLivreControle(idBlocoLivre + 1);
-				Gravacao.salvaArquivo(container);
+
 			}
 		}
 	}

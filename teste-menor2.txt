@@ -1,0 +1,20 @@
+COD_CLI[I(6)]|NOME_CLI[A(25)]|END_CLI[A(40)]|NASC_CLI[I(4)]|FON_CLI[A(15)]|MKT_CLI[A(10)]|COM_CLI[A(117)]|
+100000|Customer#000100000|Y0wsoJZmr uEKKc9sM|17|27-488-516-6598|HOUSEHOLD| according to the regular pains. |
+100001|Customer#000100001|gQ1s5C45A3PxWmZ1oFFSxt8u EcZ,|24|34-705-443-4055|HOUSEHOLD|ts. ironic instructions sleep. final deposits |
+100002|Customer#000100002|qOmTcZ7kHzJLSoaLenr9,Gu|17|27-453-414-8560|BUILDING|wake carefully. blithely regular epitaphs are among the quickly regular deposits. |
+100003|Customer#000100003|5AYbJxvjo7ErQB,cGIpKZRAE9,w2l9|5|15-783-309-8970|BUILDING|ckly blithely special accounts. theodolites are carefully. pending requests ha|
+100004|Customer#000100004|cpIOYQpMlm|18|28-316-370-8752|BUILDING|y above the slyly regular pains. unusual requests against the always special packages bre|
+100005|Customer#000100005|Wud8n74NcIpwiKSjPS zZ|16|26-935-603-9031|BUILDING|ing dugouts boost slyly above the pending, final accounts? regular deposits wake slyly alongside of the blithely i|
+100006|Customer#000100006|AkjXh4y,QNaF7,0xzbP,sG|7|17-964-673-7626|MACHINERY|grate across the slyly even packages; final, special idea|
+100007|Customer#000100007|d94JW9Hc2ZtGriOBNKyIjOeP,VZZqIX7S|17|27-244-129-5307|HOUSEHOLD|foxes are against the ironic theodolites. evenly pending ideas according to the qu|
+100008|Customer#000100008|Hv2A,YqfNnGRIKaY|18|28-828-394-8424|BUILDING|ccounts. even deposits wake quickly pinto beans. bold instructions integrate? never bold theodolites are s|
+100009|Customer#000100009|OioQ3EjJZRvxCNh6Q8E3QZH|6|16-928-807-2622|MACHINERY|aggle blithely quickly final accounts. carefully final deposits above the fluffily unus|
+10000|Customer#000010000|5oFxL0Bm,nWSj6ZLv0dG|19|29-923-910-8193|FURNITURE|luffily above the furiously even foxes. furiousl|
+100010|Customer#000100010| Tbiz2WMJX|0|10-147-978-7806|BUILDING|y regular ideas. quickly unusual gifts n|
+100011|Customer#000100011|G2bCnmnE4LKMLakJjjfmn,tnc67D4C|2|12-375-491-3418|BUILDING| requests. evenly even theodolites wake blithe|
+100012|Customer#000100012|2PNkWlHWGhNvP8Dxi5i g|13|23-140-971-4744|MACHINERY| decoys wake along the final |
+100013|Customer#000100013|gUTh2QmZOCo3qX1kkFtupbWj,ydFp9qD3sMGyA|18|28-876-629-3086|MACHINERY|nal, regular foxes. carefully special deposits eat slyly toward the carefully pending foxes-- carefully |
+100014|Customer#000100014|Vv2psjK7vOC9jEM10ZzkwIPJMWdmk, ,x|23|33-509-147-3657|FURNITURE|ake along the special account|
+100015|Customer#000100015|81LFCZERCb2F32ftbfe|14|24-502-321-3361|MACHINERY|sts. accounts after the final packages are bold deposits. furiously even platelets ser|
+100016|Customer#000100016|KiKCFN8wPEZkxzqZo85Bk9iud|0|10-698-557-3018|MACHINERY|lithely blithely final courts. unusual packages haggle quickly across the fluffily pending ideas! slyly regular |
+100017|Customer#000100017|j l7kgsGLi|24|34-881-917-1567|HOUSEHOLD|boost pending requests. platelets boost; carefully special depen|
