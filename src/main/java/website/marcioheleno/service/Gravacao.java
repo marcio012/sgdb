@@ -30,7 +30,7 @@ public class Gravacao {
 
 			// Ler Blocos, e dentro dos blocos ler as tuplas e começar a salvar esses
 			// strings em uma grande string pra salvar no TXT
-			for (Bloco bloco : container.getBlocos()) {
+			for (Bloco bloco : container.getBlocosDados()) {
 				idContainer = bloco.getDados()[0];
 				idBloco = ConverterUltils.byteToInt(ConverterUltils.getBytes(bloco.getDados(), 1, 3));
 

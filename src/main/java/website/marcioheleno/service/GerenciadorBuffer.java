@@ -1,14 +1,20 @@
 package website.marcioheleno.service;
 
-import java.text.DecimalFormat;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-
 import website.marcioheleno.model.bloco.container.Container;
 import website.marcioheleno.model.bloco.dados.Bloco;
 import website.marcioheleno.model.bloco.pagina.Pagina;
 import website.marcioheleno.utils.ConverterUltils;
+
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.text.DateFormat;
+import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Random;
 
 public class GerenciadorBuffer {
 
@@ -20,13 +26,13 @@ public class GerenciadorBuffer {
 
     private static int idBloco, idCont, idBuff, idRequisicaoCont, idRequisicaoBloco, controle = -1, pontoMud;
 
-    public static void geraRequisicoes() {
+    public static void geraRequisicoes() throws IOException {
         List<Pagina> paginasRepetidas = new ArrayList<Pagina>();
         Random rand = new Random();
         int idContainer, idBloco;
 
         for (Container container : Leitura.containers) {
-            for (Bloco bloco : container.getBlocos()) {
+            for (Bloco bloco : container.getBlocosDados()) {
                 idContainer = bloco.getDados()[0];
                 idBloco = ConverterUltils.byteToInt(ConverterUltils.getBytes(bloco.getDados(), 1, 3));
                 Pagina p = new Pagina(idContainer, idBloco, 0);
@@ -48,27 +54,68 @@ public class GerenciadorBuffer {
 
             }
         }
-
+//        System.out.println(paginasRepetidas.toString());
         executaBuffer(paginasRepetidas);
     }
 
-    public static void exibirResultados() {
+    public static void exibirResultados(){
+
         DecimalFormat df = new DecimalFormat("#.##");
+
+        try {
+            gravarLog();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println();
+        System.out.println("=========================================================");
         System.out.println("Tamanho da Memória: 	" + lru.getLru().length);
-        System.out.println("Quantidade de Requisições Feitas:	" + cacheHitMiss[2]);
-        System.out.println("Hit: 		" + cacheHitMiss[0]);
-        System.out.println("Miss: 		" + cacheHitMiss[1]);
+        System.out.println("Quantidade de Paginas requisitadas:	" + cacheHitMiss[2]);
+        System.out.println("Cache Hit: 		" + cacheHitMiss[0]);
+        System.out.println("Cache Miss: 		" + cacheHitMiss[1]);
         System.out
-			.println("Taxa de Hit:		" + df.format(((double) cacheHitMiss[0] / cacheHitMiss[2]) * 100) + "%");
+            .println("Taxa de Hit:		" + df.format(((double) cacheHitMiss[0] / cacheHitMiss[2]) * 100) + "%");
         System.out
             .println("Taxa de Miss:		" + df.format(((double) cacheHitMiss[1] / cacheHitMiss[2]) * 100) + "%");
+        System.out.println("=========================================================");
+        System.out.println();
+    }
+
+    private static void gravarLog() throws IOException {
+        java.util.Date d = new Date();
+        DecimalFormat df = new DecimalFormat("#.##");
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+//        String dStr = java.text.DateFormat.getDateInstance(DateFormat.MEDIUM).format(d);
+        String dStr = dateFormat.format(d);
+
+        // gerando arquivo de log
+//        FileWriter arq = new FileWriter("assets/relatorio_de_miss.txt");
+        String[] lines = new String[] {
+            "=================" + dStr + "=====================",
+            "Tamanho da Memória: 	" + lru.getLru().length,
+            "Quantidade de Paginas requisitadas:	" + cacheHitMiss[2],
+            "Cache Hit: 		" + cacheHitMiss[0],
+            "Cache Miss: 		" + cacheHitMiss[1],
+            "Taxa de Hit:		" + df.format(((double) cacheHitMiss[0] / cacheHitMiss[2]) * 100) + "%",
+            "Taxa de Miss:		" + df.format(((double) cacheHitMiss[1] / cacheHitMiss[2]) * 100) + "%",
+            "========================================================="
+        };
+        String path = "assets/relatorio_de_miss.txt";
+        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(path, true))){
+
+            for (String line: lines) {
+                bufferedWriter.write(line);
+                bufferedWriter.newLine();
+            }
+        }
     }
 
     public static Bloco buscaBlocoArquivo(Pagina pagina) {
 
         for (Container container : Leitura.containers) {
             if (pagina.getFileID() == container.getControle().getDados()[0]) {
-                for (Bloco bloco : container.getBlocos()) {
+                for (Bloco bloco : container.getBlocosDados()) {
                     if (pagina.getBlocoID() == ConverterUltils
                         .byteToInt(ConverterUltils.getBytes(bloco.getDados(), 1, 3)))
                         return bloco;
@@ -79,7 +126,7 @@ public class GerenciadorBuffer {
         return null;
     }
 
-    public static int[] executaBuffer(List<Pagina> paginasReq) {
+    public static int[] executaBuffer(List<Pagina> paginasReq) throws IOException {
         int posLRU = 0;
         int posBuff = 0;
         Bloco blocoArq;

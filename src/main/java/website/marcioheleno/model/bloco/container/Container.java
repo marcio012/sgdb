@@ -11,17 +11,17 @@ import website.marcioheleno.utils.ConverterUltils;
 public class Container {
 
 	static int containerId = 0;
-	Bloco controle;
-	List<Bloco> blocos = new ArrayList<Bloco>();
+	Bloco blocoDeControle;
+	List<Bloco> blocosDados = new ArrayList<Bloco>();
 
 	public Container(String linha) {
 		containerId++;
-		controle = new Bloco(linha, (byte) containerId);
+		blocoDeControle = new Bloco(linha, (byte) containerId);
 	}
 
 	public Bloco getBlocoId(int id) {
-		for (int i = 0; i < blocos.size(); i++) {
-			Bloco b = blocos.get(i);
+		for (int i = 0; i < blocosDados.size(); i++) {
+			Bloco b = blocosDados.get(i);
 			if (id == ConverterUltils.byteToInt(ConverterUltils.getBytes(b.getDados(), 1, 3))) {
 				return b;
 			}
@@ -30,23 +30,23 @@ public class Container {
 	}
 
 	public void atualizaIdLivreControle(int id) {
-		controle.setBytes(ConverterUltils.intToByte(id), 5, 3);
+		blocoDeControle.setBytes(ConverterUltils.intToByte(id), 5, 3);
 	}
 
 	public int tamanhoDoBloco() {
-		return ConverterUltils.byteToInt(ConverterUltils.getBytes(controle.getDados(), 1, 3));
+		return ConverterUltils.byteToInt(ConverterUltils.getBytes(blocoDeControle.getDados(), 1, 3));
 	}
 
 	public Bloco getControle() {
-		return controle;
+		return blocoDeControle;
 	}
 
 	public void setControle(Bloco controle) {
-		this.controle = controle;
+		this.blocoDeControle = controle;
 	}
 
 	public byte getContainerId() {
-		return controle.getDados()[0];
+		return blocoDeControle.getDados()[0];
 	}
 
 }

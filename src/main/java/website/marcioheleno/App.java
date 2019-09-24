@@ -3,13 +3,18 @@ package website.marcioheleno;
 import lombok.extern.java.Log;
 import website.marcioheleno.service.Leitura;
 
+import java.io.IOException;
+
 @Log
 public class App {
 
     public static void main(String[] args) {
-        log.info("Teste");
         Leitura leitura = new Leitura();
-        leitura.criaContainers();
+        try {
+            leitura.criaContainers();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
 }
