@@ -1,6 +1,7 @@
 package website.marcioheleno;
 
 import lombok.extern.java.Log;
+import website.marcioheleno.service.GerenciadorBuffer;
 import website.marcioheleno.service.Leitura;
 
 import java.io.IOException;
@@ -10,11 +11,9 @@ public class App {
 
     public static void main(String[] args) {
         Leitura leitura = new Leitura();
-        try {
-            leitura.criaContainers();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        leitura.criaContainers();
+
+//        GerenciadorBuffer.geraRequisicoes(leitura.criaContainers().);
 
     }
 }

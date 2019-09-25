@@ -96,7 +96,7 @@ public class Gravacao {
 
 		// grava dados no arquivo
 		try {
-			PrintWriter out = new PrintWriter("./assets/Blocos_dados_compilado.txt");
+			PrintWriter out = new PrintWriter("./assets/Blocos.txt");
 			out.println(text);
 			out.close();
 		} catch (FileNotFoundException e) {

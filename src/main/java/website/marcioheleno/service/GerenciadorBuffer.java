@@ -43,18 +43,15 @@ public class GerenciadorBuffer {
                     for (int i = 1; i <= 3; i++) {
                         paginasRepetidas.add(paginasRepetidas.get(repeticoes));
                     }
-
                 }
-
                 int repeticoes = rand.nextInt(2) + 1;
-
                 for (int i = 1; i <= 3; i++) {
                     paginasRepetidas.add(p);
                 }
 
             }
         }
-//        System.out.println(paginasRepetidas.toString());
+
         executaBuffer(paginasRepetidas);
     }
 
@@ -132,7 +129,6 @@ public class GerenciadorBuffer {
         Bloco blocoArq;
 
         for (Pagina pagina : paginasReq) {
-            // Pega HowID do Bloco requisitado
             idRequisicaoCont = pagina.getFileID();
             idRequisicaoBloco = pagina.getBlocoID();
             int status = 0;
@@ -235,7 +231,6 @@ public class GerenciadorBuffer {
                 for (int j = 0, g = 0; j < vecLru.length - espacoLivre - 1; j++, g++) {
                     if (vecLru[i].getFileID() == vecLru[j].getFileID()
                         && vecLru[i].getBlocoID() == vecLru[j].getBlocoID()) {
-                        // aux[j + 1] = vecLru[j + 1];
                         g++;
                     }
                     aux[j + 1] = vecLru[g];
@@ -249,13 +244,12 @@ public class GerenciadorBuffer {
     public static void adicionaPaginaLRU(Pagina pgNovo) {
         int espacoLivre = 0;
         Pagina[] vecLru = lru.getLru().clone();
-        // verifica numero de espacos livres na lru
         for (int i = 0; i < vecLru.length; i++) {
             if (vecLru[i] == null) {
                 espacoLivre++;
             }
         }
-        // lru esta vazio
+
         if (espacoLivre == vecLru.length) {
             vecLru[0] = pgNovo;
         } else {// lru nao esta vazio

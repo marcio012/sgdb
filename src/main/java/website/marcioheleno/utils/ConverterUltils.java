@@ -78,9 +78,6 @@ public class ConverterUltils {
     }
 
     public static String byteToString(byte[] bytes){
-
         return new String(bytes);
-
     }
-
 }

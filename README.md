@@ -18,7 +18,8 @@ Por simplicidade cada tabela persistida corresponderá a um arquivo físico:
 
 #### Gerenciador de arquivo
 O gerenciador de arquivo deve prover os seguintes serviços:
-* criar o arquivo
+
+* criar o arquivo 
 * ler bloco 
 * grava bloco(existente)
 * criar bloco

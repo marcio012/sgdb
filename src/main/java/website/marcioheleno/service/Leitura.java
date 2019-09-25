@@ -14,35 +14,35 @@ import website.marcioheleno.utils.ConverterUltils;
 @Log
 public class Leitura {
 
-    String arquivo3 = "assets/Blocos_dados_compilado.txt";
-
 	public static List<Container> containers = new ArrayList<Container>();
 
-	public void criaContainers() throws IOException {
+//	String arquivo3 = "assets/Blocos_dados_compilado.txt";
+
+	public void criaContainers() {
 
 //		TODO: Uso em teste
-		String arquivo1 = "assets/cli-tpch.txt";
-		String arquivo2 = "assets/forn-tpch.txt";
+		String arquivo1 = "assets/teste-menor.txt";
+		String arquivo2 = "assets/teste-menor2.txt";
 
 
 //      TODO: Uso para apresentar
 //		String arquivo1 = "assets/forn-tpch.txt";
 //		String arquivo2 = "assets/cli-tpch.txt";
-//		iniciarLeitura(arquivo1);
-//		iniciarLeitura(arquivo2);
-        iniciarLeitura(arquivo3);
+		iniciarLeitura(arquivo1);
+		iniciarLeitura(arquivo2);
+//        iniciarLeitura(arquivo3);
 
         log.info("Containers criados");
         log.info("/n/n/n");
         log.info("TESTE BUFFER/n/n/n");
 
-		log.info("Containers criados");
-		log.info("/n/n/n");
-		log.info("TESTE BUFFER/n/n/n");
-        iniciarLeitura(arquivo3);
-		GerenciadorBuffer.geraRequisicoes();
+        try {
+			GerenciadorBuffer.geraRequisicoes();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 //      TODO: Chamada de exportação do arquivo para outro txt
-//		Gravacao.exportaArquivoTxt(containers);
+		Gravacao.exportaArquivoTxt(containers);
 
 	}
 
@@ -82,13 +82,13 @@ public class Leitura {
 		} else { // bloco maior que tamanho da tupla
 			if (container.tamanhoDoBloco() - container.getBlocoId(idBlocoLivre).getTamanhoBloco() > tupla.length) {
                 log.info("Salvou tupla no bloco: " + idBlocoLivre);
-//                log.info("idmaiorq" + idBlocoLivre + "tamanho" + container.getBlocoId(idBlocoLivre).getTamanhoBloco());
+
 				container.getBlocoId(idBlocoLivre).adicionarTuplaNoBloco(tupla);
-//				Gravacao.salvaArquivo(container);
-			} else { // bloco menor que tamanho da tupla
+
+			} else {
                 log.info("idmenorq" + idBlocoLivre + "tamanho" + container.getBlocoId(idBlocoLivre).getTamanhoBloco());
 				Bloco novo = new Bloco(idBlocoLivre + 1, container.getContainerId());
-//                log.info("Gerado bloco de ID: " + (idBlocoLivre + 1));
+
 				novo.adicionarTuplaNoBloco(tupla);
 				container.getBlocosDados().add(novo);
 				container.atualizaIdLivreControle(idBlocoLivre + 1);
