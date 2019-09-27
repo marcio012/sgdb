@@ -126,3 +126,19 @@ Cache Miss: 		2
 Taxa de Hit:		66,67%
 Taxa de Miss:		33,33%
 =========================================================
+=================26/09/2019 18:29:52=====================
+Tamanho da Memória: 	680
+Quantidade de Paginas requisitadas:	6
+Cache Hit: 		4
+Cache Miss: 		2
+Taxa de Hit:		66,67%
+Taxa de Miss:		33,33%
+=========================================================
+=================26/09/2019 18:43:25=====================
+Tamanho da Memória: 	680
+Quantidade de Paginas requisitadas:	6
+Cache Hit: 		4
+Cache Miss: 		2
+Taxa de Hit:		66,67%
+Taxa de Miss:		33,33%
+=========================================================

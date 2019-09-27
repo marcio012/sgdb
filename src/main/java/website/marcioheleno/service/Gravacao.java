@@ -1,11 +1,9 @@
 package website.marcioheleno.service;
 
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import lombok.extern.java.Log;
 import website.marcioheleno.model.bloco.container.Container;
@@ -96,7 +94,7 @@ public class Gravacao {
 
 		// grava dados no arquivo
 		try {
-			PrintWriter out = new PrintWriter("./assets/Blocos.txt");
+			PrintWriter out = new PrintWriter("./assets/Blocos.bin");
 			out.println(text);
 			out.close();
 		} catch (FileNotFoundException e) {

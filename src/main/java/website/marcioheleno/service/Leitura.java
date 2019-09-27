@@ -1,7 +1,6 @@
 package website.marcioheleno.service;
 
-import java.io.IOException;
-import java.io.RandomAccessFile;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,7 +15,6 @@ public class Leitura {
 
 	public static List<Container> containers = new ArrayList<Container>();
 
-//	String arquivo3 = "assets/Blocos_dados_compilado.txt";
 
 	public void criaContainers() {
 
@@ -50,7 +48,11 @@ public class Leitura {
 		log.info("Iniciando leitura do arquivo...");
 
 		try {
-			RandomAccessFile arquivo = new RandomAccessFile(arquivoLeitura, "rw");
+
+//			RandomAccessFile arquivo = new RandomAccessFile(arquivoLeitura, "rw");
+
+			BufferedReader arquivo = new BufferedReader(new FileReader(arquivoLeitura));
+			RandomAccessFile raf =  new RandomAccessFile(new File("dados.bin"), "rw");
 
 			String linha = arquivo.readLine();
 			Container container = new Container(linha);
@@ -59,6 +61,8 @@ public class Leitura {
 			while ((linha = arquivo.readLine()) != null) {
 				adicionarTupla(Tupla.montaTuplaByte(separador(linha)), container);
 			}
+
+			// gravar um arquivo em byte aqui
 
 			arquivo.close();
 			containers.add(container);
