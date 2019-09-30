@@ -142,3 +142,59 @@ Cache Miss: 		2
 Taxa de Hit:		66,67%
 Taxa de Miss:		33,33%
 =========================================================
+=================30/09/2019 00:24:22=====================
+Tamanho da Memória: 	680
+Quantidade de Paginas requisitadas:	6
+Cache Hit: 		4
+Cache Miss: 		2
+Taxa de Hit:		66,67%
+Taxa de Miss:		33,33%
+=========================================================
+=================30/09/2019 00:26:51=====================
+Tamanho da Memória: 	680
+Quantidade de Paginas requisitadas:	6
+Cache Hit: 		4
+Cache Miss: 		2
+Taxa de Hit:		66,67%
+Taxa de Miss:		33,33%
+=========================================================
+=================30/09/2019 00:28:09=====================
+Tamanho da Memória: 	680
+Quantidade de Paginas requisitadas:	6
+Cache Hit: 		4
+Cache Miss: 		2
+Taxa de Hit:		66,67%
+Taxa de Miss:		33,33%
+=========================================================
+=================30/09/2019 00:33:00=====================
+Tamanho da Memória: 	680
+Quantidade de Paginas requisitadas:	6
+Cache Hit: 		4
+Cache Miss: 		2
+Taxa de Hit:		66,67%
+Taxa de Miss:		33,33%
+=========================================================
+=================30/09/2019 00:33:33=====================
+Tamanho da Memória: 	680
+Quantidade de Paginas requisitadas:	6
+Cache Hit: 		4
+Cache Miss: 		2
+Taxa de Hit:		66,67%
+Taxa de Miss:		33,33%
+=========================================================
+=================30/09/2019 00:35:25=====================
+Tamanho da Memória: 	680
+Quantidade de Paginas requisitadas:	14493
+Cache Hit: 		10594
+Cache Miss: 		3899
+Taxa de Hit:		73,1%
+Taxa de Miss:		26,9%
+=========================================================
+=================30/09/2019 00:40:53=====================
+Tamanho da Memória: 	680
+Quantidade de Paginas requisitadas:	14493
+Cache Hit: 		10588
+Cache Miss: 		3905
+Taxa de Hit:		73,06%
+Taxa de Miss:		26,94%
+=========================================================

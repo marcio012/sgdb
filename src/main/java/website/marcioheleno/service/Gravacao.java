@@ -94,10 +94,10 @@ public class Gravacao {
 
 		// grava dados no arquivo
 		try {
-			PrintWriter out = new PrintWriter("./assets/Blocos.bin");
-			out.println(text);
+            BufferedWriter out = new BufferedWriter(new FileWriter("req.txt"));
+//			PrintWriter out = new PrintWriter("./assets/Blocos.bin");
 			out.close();
-		} catch (FileNotFoundException e) {
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
 

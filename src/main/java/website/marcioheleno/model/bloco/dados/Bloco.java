@@ -7,7 +7,10 @@ import website.marcioheleno.utils.ConverterUltils;
 public class Bloco {
 
 	private int tamanho = 8192;
+	private int id;
 	private byte[] dados;
+	private int numTuplasAdicionadas;
+	private int espacoLivre;
 
 	// cria bloco normal
 	public Bloco(int idBloco, byte idContainer) {

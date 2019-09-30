@@ -52,7 +52,7 @@ public class Leitura {
 //			RandomAccessFile arquivo = new RandomAccessFile(arquivoLeitura, "rw");
 
 			BufferedReader arquivo = new BufferedReader(new FileReader(arquivoLeitura));
-			RandomAccessFile raf =  new RandomAccessFile(new File("dados.bin"), "rw");
+//			RandomAccessFile raf =  new RandomAccessFile(new File("dados.bin"), "rw");
 
 			String linha = arquivo.readLine();
 			Container container = new Container(linha);
@@ -83,6 +83,7 @@ public class Leitura {
 			novo.adicionarTuplaNoBloco(tupla);
 			container.getBlocosDados().add(novo);
 			container.atualizaIdLivreControle(1);
+			log.info("ID do Bloco " + idBlocoLivre + " Tamhanho do bloco " + novo.getTamanhoBloco());
 		} else { // bloco maior que tamanho da tupla
 			if (container.tamanhoDoBloco() - container.getBlocoId(idBlocoLivre).getTamanhoBloco() > tupla.length) {
                 log.info("Salvou tupla no bloco: " + idBlocoLivre);
@@ -96,8 +97,11 @@ public class Leitura {
 				novo.adicionarTuplaNoBloco(tupla);
 				container.getBlocosDados().add(novo);
 				container.atualizaIdLivreControle(idBlocoLivre + 1);
+				log.info("ID do Bloco " + idBlocoLivre + " Tamhanho do bloco " + novo.getTamanhoBloco());
 			}
+
 		}
+
 	}
 
 	String[] separador(String linha) {
