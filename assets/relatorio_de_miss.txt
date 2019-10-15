@@ -198,3 +198,11 @@ Cache Miss: 		3905
 Taxa de Hit:		73,06%
 Taxa de Miss:		26,94%
 =========================================================
+=================15/10/2019 03:50:05=====================
+Tamanho da Memória: 	680
+Quantidade de Paginas requisitadas:	6
+Cache Hit: 		4
+Cache Miss: 		2
+Taxa de Hit:		66,67%
+Taxa de Miss:		33,33%
+=========================================================
